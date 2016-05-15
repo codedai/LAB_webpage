@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<head>
+  <meta name="viewport" content="width=deivice-width, initial-scale=1.0">
+  <title>WGO</title>
+  <script type="text/javascript" src="./static/wgo/wgo.js"></script>
+  <script type="text/javascript" src="./static/wgo/kifu.js"></script>
+  <script type="text/javascript" src="./static/wgo/sgfparser.js"></script>
+  <script type="text/javascript" src="./static/wgo/player.js"></script>
+  <script type="text/javascript" src="./static/wgo/basicplayer.js"></script>
+  <script type="text/javascript" src="./static/wgo/basicplayer.component.js"></script>
+  <script type="text/javascript" src="./static/wgo/basicplayer.infobox.js"></script>
+  <script type="text/javascript" src="./static/wgo/basicplayer.commentbox.js"></script>
+  <script type="text/javascript" src="./static/wgo/basicplayer.control.js"></script>
+  <script type="text/javascript" src="./static/wgo/player.editable.js"></script>
+  <script type="text/javascript" src="./static/wgo/scoremode.js"></script>
+  <script type="text/javascript" src="./static/wgo/player.permalink.js"></script>
+  <link rel="stylesheet" type="text/css" href="./static/css/wgo.player.css">
+  <style>
+    .player{
+      width:60%;
+      margin:0;
+	  margin-left:auto;
+	  margin-right:auto;
+    }
+    @media screen and (orientation:portrait){
+      .player{
+        width:100%
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="header">
+  <img class="logo" src="./static/images/logo.png" alt="logo" style="height:70px;width:84px;">
+  <h1 style="font-family:Consolas">milabGO vision 1.0</h1>
+  </div>
+  <br/>
+    <div class="player wgo-player-main wgo-xsmall" data-wgo="(;SZ[19];B[pc];W[pe]C[You have many choices - for example: R13];B[qg]C[Click on a letter to select a variation](;W[of]C[Old joseki];B[mc];W[qc];B[qb];W[qd];B[qj];W[ob];B[pb];W[oc];B[od];W[pd];B[oa];W[nd];B[nb];W[oe];B[jc])(;W[qc];B[qb];W[qd];B[mc](;W[og];B[pg];W[oh];B[pi];W[ob];B[pb];W[oc];B[pd];W[od];B[qe];W[re];B[qf];W[rb];B[oe];W[ne];B[pf];W[md]TR[rb][qc][qd][re]C[Marked stones are not dead yet.])(;W[pg];B[ph];W[ob];B[pb];W[oc];B[od];W[pd];B[nc];W[nd]MA[og]C[White can play at X as well.];B[oe];W[nf];B[oa];W[of];B[nb];W[qh];B[qf];W[pi];B[oh];W[ri];B[rh];W[qi];B[pf];W[nh];B[re];W[oc];B[ob];W[ne];B[oc];W[rg];B[rf];W[sh];B[rc]C[Interesting joseki])))" id="wgo_0">
+    <div class="wgo-player-left" style="display: none; height: 336px;">
+      <div class="wgo-player-left-wrapper">
+      </div>
+    </div>
+    <div class="wgo-player-center">
+      <div class="wgo-player-top" style="display: block;">
+        <div class="wgo-player-top-wrapper"><div class="wgo-infobox">
+          <div class="wgo-box-wrapper wgo-player-wrapper wgo-white">
+            <div class="wgo-box-title">White</div>
+            <div class="wgo-player-info">
+              <div class="wgo-player-info-box-wrapper">
+                <div class="wgo-player-info-box">
+                  <div class="wgo-player-info-title">Rank</div>
+                  <div class="wgo-player-info-value">-</div>
+                </div>
+              </div>
+              <div class="wgo-player-info-box-wrapper">
+                <div class="wgo-player-info-box">
+                  <div class="wgo-player-info-title">Caps</div>
+                  <div class="wgo-player-info-value">0</div>
+                </div>
+              </div>
+              <div class="wgo-player-info-box-wrapper">
+                <div class="wgo-player-info-box">
+                  <div class="wgo-player-info-title">Time</div>
+                  <div class="wgo-player-info-value">--:--</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="wgo-box-wrapper wgo-player-wrapper wgo-black">
+            <div class="wgo-box-title">Black</div>
+            <div class="wgo-player-info">
+              <div class="wgo-player-info-box-wrapper">
+                <div class="wgo-player-info-box">
+                  <div class="wgo-player-info-title">Rank</div>
+                  <div class="wgo-player-info-value">-</div>
+                </div>
+              </div>
+              <div class="wgo-player-info-box-wrapper">
+                <div class="wgo-player-info-box">
+                  <div class="wgo-player-info-title">Caps</div>
+                  <div class="wgo-player-info-value">0</div>
+                </div>
+              </div>
+              <div class="wgo-player-info-box-wrapper">
+                <div class="wgo-player-info-box">
+                  <div class="wgo-player-info-title">Time</div>
+                  <div class="wgo-player-info-value">--:--</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="wgo-player-board" style="height: auto; padding-top: 0px;">
+      <div class="wgo-board" style="width: 131px; height: 131px; background-image: url(&quot;http://wgo.waltheri.net/wgo/wood1.jpg&quot;);">
+        <canvas width="131" height="131" style="position: absolute; z-index: 100;">
+        </canvas>
+        <canvas width="131" height="131" style="position: absolute; z-index: 200;"></canvas>
+        <canvas width="131" height="131" style="position: absolute; z-index: 300;"></canvas>
+      </div>
+    </div>
+    <div class="wgo-player-bottom" style="display: block;">
+      <div class="wgo-player-bottom-wrapper">
+        <div class="wgo-player-control wgo-340">
+          <div class="wgo-control-wrapper">
+            <div class="wgo-ctrlgroup wgo-ctrlgroup-left">
+              <button class="wgo-button wgo-button-menu" title="Menu">
+              </button>
+            </div>
+            <div class="wgo-ctrlgroup wgo-ctrlgroup-right">
+              <button class="wgo-button wgo-button-about" title="About">
+              </button>
+            </div>
+            <div class="wgo-ctrlgroup wgo-ctrlgroup-control">
+              <button class="wgo-button wgo-button-first wgo-disabled" title="First" disabled="">
+              </button>
+              <button class="wgo-button wgo-button-multiprev wgo-disabled" title="10 moves back" disabled="">
+              </button>
+              <button class="wgo-button wgo-button-previous wgo-disabled" title="Previous" disabled="">
+              </button>
+              <form class="wgo-player-mn-wrapper">
+                <input type="text" class="wgo-player-mn-value">
+              </form>
+              <button class="wgo-button wgo-button-next" title="Next">
+              </button>
+              <button class="wgo-button wgo-button-multinext" title="10 moves forward">
+              </button>
+              <button class="wgo-button wgo-button-last" title="Last">
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="wgo-player-right" style="display: none; height: 336px;">
+    <div class="wgo-player-right-wrapper">
+    </div>
+  </div>
+</div>
+</body>
+</html>
