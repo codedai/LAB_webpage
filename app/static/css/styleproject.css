@@ -1,0 +1,155 @@
+﻿*{
+	margin:0px;
+	padding:0px;
+	border:0px;
+	font-size:100%;
+	vertical-align:baseline;
+	font-family:inherit;
+}
+/*header*/
+body{
+	font-family:'Microsoft YaHei',Verdana,'Open Sans', sans-serif;
+}
+.header{
+	background-color:#F5F5F5;
+	width:100%;
+	height:88px;
+	border-bottom:thick ridge #2C3E50;
+}
+.logo{
+	padding:0.8em 0 0.8em 12%;
+	float:left;
+	width:88px;
+	height:70px;
+}
+ .header p {
+	font-size: 1.5em;
+	color:black;
+	float:right;
+	display:inline-block;
+    margin:30px 20% 0px 0px; 
+	text-shadow: 1px 0px rgb(93, 116, 156), 0px 0px #444;
+	letter-spacing:0.2em;
+	overflow:auto;
+}
+/*star progect*/
+#team{
+	background:white;
+	text-align:center;
+	padding: 4% 0;	
+}
+.wrap{
+	width:95%;
+	margin:0px auto;
+}/*clear用以父元素适应子元素*/
+.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 1px;
+  margin-top:-1px;
+}
+.team-grids h2{
+	color: #777;
+	font-size: 2.5em;
+	font-weight: 300;
+	padding-bottom: 1%;
+}
+.team-grids p{
+	width: 78%;
+	color: #000;
+	font-size: 0.8755em;
+	font-weight: 300;
+	padding-bottom: 2.5%;
+	text-align: center;
+	margin: 0 auto;
+	line-height: 1.9em;
+}
+.images_1_of_4,a.demo{
+	display: block;
+	float:left;
+	text-align: center;
+	width: 25%;
+}
+.images_1_of_4 a.radius img{
+	/*border:25px double #D3D3D3;*/
+	width: 100%;
+	cursor: pointer;
+	border-radius:8px;
+	transition: 0.5s all;
+	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-o-transition: 0.5s all;
+	cursor:default;
+}
+.images_1_of_4 a img:hover{
+	opacity: 0.8;
+}
+.images_1_of_4  h3{
+	color: #777;
+	font-size:1.5em;
+	font-weight :400;
+	padding: 0.5em 0em 0.3em 0em;
+}
+.images_1_of_4  p {
+	font-size: 0.9em;
+	font-weight: 300;
+	text-align: center;
+	line-height: 1.9em;
+	padding: 0em 0em 1.3em 0em;
+}
+
+
+/*** Media Queries ***/
+@media only screen and (max-width: 1024px){
+	.team-grids h2{
+		font-size:2.2em;
+	}
+    .images_1_of_4 h3{
+		font-size:1.3em;
+	}
+}
+@media only screen and (max-width: 768px){
+	.header p{
+		font-size:1.5em;
+	}
+	.team-grids h2{
+		font-size: 2em;
+	}
+	.images_1_of_4{
+		width:50%;
+		margin:0;
+	}
+	.images_1_of_4 h3{
+		font-size:1.3em;
+	}
+	.images_1_of_4 a.radius img{
+		width:80%;
+	}
+}
+
+@media only screen and (max-width: 480px){
+	.images_1_of_4 a.radius img {
+		width: 90%;
+	}
+}
+@media only screen and (max-width: 400px){
+	.logo{
+	padding:0.8em 0 0.8em 8%;
+	width:44px;
+	height:35px;
+	}
+}
+@media only screen and (max-width: 320px){
+	.logo{
+		display:none;
+	}
+	.images_1_of_4{
+		width:100%;
+	}
+	.images_1_of_4 a.radius img {
+		width: 50%;
+	}
+}

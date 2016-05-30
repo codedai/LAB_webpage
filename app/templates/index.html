@@ -3,86 +3,40 @@ Author: W3layouts
 Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
+modified by panchen
 -->
-
+<!DOCTYPE HTML>
 <html>
 <head>
-<title>The Web-Wireframe Template | Home :: w3layouts</title>
+<title>AI Games</title>
 <link href="./static/css/style.css" rel="stylesheet" type="text/css" media="all" />
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <script type="text/javascript" src="./static/js/jquery.min.js"></script>
 <!-- start portfolios -->
-<link href="./css/portfolio.css" rel="stylesheet" type="text/css" media="all" />
-        
+<link href="./static/css/portfolio.css" rel="stylesheet" type="text/css" media="all" />
 		<script type="text/javascript" src="./static/js/fliplightbox.min.js"></script>
 		<script type="text/javascript">
 			$('body').flipLightBox()
 		</script>
 		<script type="text/javascript" src="./static/js/jquery.easing.min.js"></script>
 		<script type="text/javascript" src="./static/js/jquery.mixitup.min.js"></script>
-		<script type="text/javascript">
-			$(function() {
 
-				var filterList = {
-
-					init : function() {
-
-						// MixItUp plugin
-						// http://mixitup.io
-						$('#portfoliolist').mixitup({
-							targetSelector : '.portfolio',
-							filterSelector : '.filter',
-							effects : ['fade'],
-							easing : 'snap',
-							// call the hover effect
-							onMixEnd : filterList.hoverEffect()
-						});
-
-					},
-
-					hoverEffect : function() {
-
-						// Simple parallax effect
-						$('#portfoliolist .portfolio').hover(function() {
-							$(this).find('.label').stop().animate({
-								bottom : 0
-							}, 200, 'easeOutQuad');
-							$(this).find('img').stop().animate({
-								top : -40
-							}, 500, 'easeOutQuad');
-						}, function() {
-							$(this).find('.label').stop().animate({
-								bottom : -40
-							}, 200, 'easeInQuad');
-							$(this).find('img').stop().animate({
-								top : 0
-							}, 300, 'easeOutQuad');
-						});
-
-					}
-				};
-
-				// Run the show!
-				filterList.init();
-
-			});
-		</script>
 		 <!-- scroll -->
 		 <script type="text/javascript">
 			$(document).ready(function() {
-
+			
 				var defaults = {
 		  			containerID: 'toTop', // fading element id
 					containerHoverID: 'toTopHover', // fading element hover id
 					scrollSpeed: 1200,
-					easingType: 'linear'
+					easingType: 'linear' 
 		 		};
-
-
+				
+				
 				$().UItoTop({ easingType: 'easeOutQuart' });
-
+				
 			});
 		</script>
 		 <!-- //scroll -->
@@ -91,21 +45,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!-- popup -->
 <link rel="stylesheet" type="text/css" href="./static/css/magnific-popup.css">
 <script src="./static/js/jquery.magnific-popup.js" type="text/javascript"></script>
-				<script>
-					$(document).ready(function() {
-						$('.popup-with-zoom-anim').magnificPopup({
-							type: 'inline',
-							fixedContentPos: false,
-							fixedBgPos: true,
-							overflowY: 'auto',
-							closeBtnInside: true,
-							preloader: false,
-							midClick: true,
-							removalDelay: 300,
-							mainClass: 'my-mfp-zoom-in'
-					});
-				});
-				</script>
+				
 <script type="text/javascript" src="./static/js/jquery.lightbox.js"></script>
 <link rel="stylesheet" type="text/css" href="./static/css/lightbox.css" media="screen" />
   <script type="text/javascript">
@@ -116,83 +56,101 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 </head>
 <body>
 	<div class="header" id="home">
-		   <div  id="main-nav" class="wrap main-nav" style="width:75%">
-				<div class="logo"><a href="index.html"><img src="./static/images/logo.png" alt="logo" style="height:70px;width=88px;"/></a></div>
+		   <div class="wrap main-nav" id="main-nav">
+				<div class="logo"><a href="index.html"><img src="./static/images/logo.png" alt="logo" /></a></div>
 				<!-- start h_menu -->
-			<div id="topnav" ><!--start topnav --->
-             <!--<div id="main-nav" class="collapse navbar-collapse"> --->
-	        <nav >
-	        		 <ul id="mainNav">
-						 <li class="active"><a href="#banner" class="scroll">Home</a></li>
-					     <li><a href="#about" class="scroll">About</a></li>
-					     <li><a href="#portfolio" class="scroll">Games</a> </li>
-                         <li><a href="#team" class="scroll">Team</a> </li>			            
-					     <li><a href="#contact" class="scroll">Contact</a></li>
+			<div id="topnav"><!--start topnav --->
+				<nav  >
+	        		 <ul id="mainNav" >
+						 <li class="active"><a href="#banner" class="scroll">主页</a></li>
+					     <li><a href="#about" class="scroll">介绍</a></li>
+					     <li><a href="#team" class="scroll">成员</a> </li>	
+					     <li><a href="#portfolio" class="scroll">项目</a> </li>			            
+					     <li><a href="#contact" class="scroll">联系</a></li>
 						<div class="clear"> </div>
 					</ul>
-	        </nav>
-           <!-- </div> --->
-	        <a href="#" id="navbtn">Nav Menu</a>
-	        <div class="clear"></div>
-	      </div>					
+				</nav>
+				<a href="#" id="navbtn">Nav Menu</a>
+				<div class="clear"></div>
+	        </div>					
+		  </div>
 	</div>
-</div>
+	 <!-- Slider-starts-Here -->
+	<script src="static/js/responsiveslides.min.js"></script>
+	 <script>
+		$(function () {
+		  $("#slider").responsiveSlides({
+			auto:true,
+			nav: false,
+			speed: 500,
+			namespace: "callbacks",
+			pager:true,
+		  });
+		});
+		
+	   </script>
+	
+    <div class="slider" id="banner" >
+		  <div class="callbacks_container">
+			  <ul class="rslides" id="slider">
+				
+					<div class="slid banner1">
+						  <div class="caption">
+								<h3>人工智能（Artificial Intelligence,AI）</h3>
+								<p>它是研究、开发用于模拟、延伸和扩展人的智能的理论、方法、技术及应用系统的一门新的技术科学。</p>
+						  </div>
+					</div>
+				
+				
+					 <div class="slid banner2">	
+						  <div class="caption">
+								<h3>机器学习（Machine Learning, ML）</h3>
+								<p>人工智能的核心，一门多领域交叉学科，涉及概率论、统计学、逼近论、凸分析、算法复杂度理论等多门学科。专门研究计算机怎样模拟或实现人类的学习行为，以获取新的知识或技能，重新组织已有的知识结构使之不断改善自身的性能。</p>
+						  </div>
+					 </div>
+				
+				
+					<div class="slid banner3">	
+						<div class="caption">
+							<h3>阿尔法围棋（AlphaGo）</h3>
+							<p>阿尔法围棋（AlphaGo）是一款围棋人工智能程序。这个程序利
+
+用“价值网络”去计算局面，用“策略网络”去选择下子。</p>
+						</div>
+					</div>
+				
+			  </ul>
+		 </div>
+	 </div>
+
 	<!---------banner------------->
-	<div class="banner" id="banner">
-		<div class="wrap" id="bannerone">
-			<h2>We Build Awesome Wireframe</h2>
+	<!--<div class="banner" id="banner">
+		<div class="wrap">
+		<h2>We Build Awesome Wireframe</h2>
 			<p>A Template By your Company</p>
-			<img src="./static/images/电脑（线条）.png" alt="" />
+			<img src="./images/banner.png" alt="" />
 		</div>
-	</div>	
+	</div>-->
 	<!---------about------------->
 	<div class="about" id="about">
 		<div class="wrap">
-			<h3>About Us</h3>
-			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
-			<img src="./static/images/computer.png" alt="" style="width:70%;height:auto;"/>
-			<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature. </p>
+			<h3>研究方向</h3>
+			<p style="font-size:1.1em;">让机器拥有学习，决策，学习的能力，使机器像人类一样独立的思考。
+			基于不同类型的游戏大数据，测试学习算法以及神经网络结构的性能，致力于研究创造具有普适性的强人工智能算法。</p>
+			<img src="./static/images/computer.png" alt="" style="width:65%;height:auto;" />
+			
 		</div>
 	</div>
-
-<div class="portfoli1" id="portfolio"><!-- start portfoli1 -->
+	<!-- start portfoli1 -->
+<div class="portfoli1" id="portfolio">
 	<div class="wrap">
-		<h5>Our Games</h5>
-		<h6>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,galley of type and scrambled it to make a type specimen book.</h6>
+		<a href="/project" target="_blank"><h5>项目介绍</h5></a>
+		<p>目前在研项目</p>
 		<div class="container"><!-- start container -->
-						<ul id="filters" class="clearfix">
-							<li>
-								<span class="filter active" data-filter="app card icon web">All</span>
-							</li>
-							<li>
-								<span class="filter" data-filter="app  icon">App</span>
-							</li>
-							<li>
-								<span class="filter" data-filter="card ">Card</span>
-							</li>
-							<li>
-								<span class="filter" data-filter="icon app card ">Icon</span>
-							</li>
-							<li>
-								<span class="filter" data-filter="web card icon">Web</span>
-							</li>
-						</ul>
 						<div id="portfoliolist">
-                            <div class="portfolio app mix_all" data-cat="app" style="display: inline-block; opacity: 1;">
-								<div class="portfolio-wrapper">
-									<a href="/milGo"><img src="./static/images/围棋.png" alt="Image 2" style="top: 0px;"> </a>
-									<div class="label" style="bottom: -40px;">
-										<div class="label-text">
-											<span class="text-category">围棋</span>
-										</div>
-										<div class="label-bg"></div>
-									</div>
-								</div>
-							</div>
-                            <!-- 我是在html注释内
 							<div class="portfolio app mix_all" data-cat="app" style="display: inline-block; opacity: 1;">
 								<div class="portfolio-wrapper">
-									<a href="./static/images/pf-1.jpg #small-dialog1" class="flipLightBox popup-with-zoom-anim"><img src="./static/images/围棋.png" alt="Image 2" style="top: 0px;"> </a>
+									<img src="./static/images/wq-1.jpg" alt="围棋" style="top: 0px;">
 									<div class="label" style="bottom: -40px;">
 										<div class="label-text">
 											<span class="text-category">围棋</span>									
@@ -203,35 +161,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							</div>
 							<div id="small-dialog1" class="mfp-hide">
 							<div class="pop_up">
-								<img src="./static/images/pf-1.jpg">
+								<img src="./static/images/pf-1.jpg">								   	 	
 							</div>			
-						    </div>
-						    -->
-							<div class="portfolio app mix_all" data-cat="app" style="display: inline-block; opacity: 1;">
-								<div class="portfolio-wrapper">
-									<a href="./static/images/pf-10.jpg #small-dialog1" class="flipLightBox popup-with-zoom-anim"><img src="./static/images/魔兽.png" alt="Image 2" style="top: 0px;"> </a>
-									<div class="label" style="bottom: -40px;">
-										<div class="label-text">
-											<span class="text-category">魔兽世界</span>									
-										</div>
-										<div class="label-bg"></div>
-									</div>
-								</div>
-							</div>
-							<div class="portfolio web mix_all" data-cat="web" style="display: inline-block; opacity: 1;">
-								<div class="portfolio-wrapper">
-									<a href="./static/images/pf-2.jpg #small-dialog1" class="flipLightBox popup-with-zoom-anim"><img src="./static/images/五子棋.png" alt="Image 2" style="top: 0px;"> </a>
-									<div class="label" style="bottom: -40px;">
-										<div class="label-text">
-											<span class="text-category">五子棋</span>											
-										</div>
-										<div class="label-bg"></div>
-									</div>
-								</div>
-							</div>
+						</div>	
 							<div class="portfolio card mix_all" data-cat="card" style="display: inline-block; opacity: 1;">
 								<div class="portfolio-wrapper">
-									<a href="./static/images/pf-5.jpg #small-dialog1" class="flipLightBox popup-with-zoom-anim"><img src="./static/images/星际争霸.png" alt="Image 2" style="top: 0px;"> </a>
+									<img src="./static/images/xjzb-2.jpg" alt="星际争霸" style="top: 0px;">
 									<div class="label" style="bottom: -40px;">
 										<div class="label-text">
 											<span class="text-category">星际争霸</span>											
@@ -242,7 +177,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							</div>
 							<div class="portfolio web mix_all" data-cat="web" style="display: inline-block; opacity: 1;">
 								<div class="portfolio-wrapper">
-									<a href="./static/images/pf-2.jpg #small-dialog1" class="flipLightBox popup-with-zoom-anim"><img src="./static/images/麻将.png" alt="Image 2" style="top: 0px;"> </a>
+									<img src="./static/images/mj-3.jpg" alt="中国麻将" style="top: 0px;">
 									<div class="label" style="bottom: -40px;">
 										<div class="label-text">
 											<span class="text-category">中国麻将</span>											
@@ -253,79 +188,95 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							</div>
 							<div class="portfolio app mix_all" data-cat="app" style="display: inline-block; opacity: 1;">
 								<div class="portfolio-wrapper">
-									<a href="./static/images/pf-6.jpg #small-dialog1" class="flipLightBox popup-with-zoom-anim"><img src="./static/images/pf-6.jpg" alt="Image 5" style="top: 0px;"> </a>
+									<img src="./static/images/zdjs-4.jpg" alt="自动驾驶" style="top: 0px;">
 									<div class="label" style="bottom: -40px;">
 										<div class="label-text">
-											<span class="text-category">Title</span>									
+											<span class="text-category">自动驾驶</span>									
 										</div>
 										<div class="label-bg"></div>
 									</div>
 								</div>
 							</div>
-							<div class="portfolio card mix_all" data-cat="card" style="display: inline-block; opacity: 1;">
-								<div class="portfolio-wrapper">
-									<a href="./static/images/pf-7.jpg #small-dialog1" class="flipLightBox popup-with-zoom-anim"><img src="./static/images/pf-7.jpg" alt="Image 6" style="top: 0px;"> </a>
-									<div class="label" style="bottom: -40px;">
-										<div class="label-text">
-											<span class="text-category">Title</span>									
-										</div>
-										<div class="label-bg"></div>
-									</div>
-								</div>
-							</div>
-							<div class="portfolio card mix_all" data-cat="card" style="display: inline-block; opacity: 1;">
-								<div class="portfolio-wrapper">
-								<a href="./static/images/pf-8.jpg #small-dialog1" class="flipLightBox popup-with-zoom-anim"><img src="./static/images/pf-8.jpg" alt="Image 7" style="top: 0px;"> </a>
-									<div class="label" style="bottom: -40px;">
-										<div class="label-text">
-											<span class="text-category">Title</span>								
-										</div>
-										<div class="label-bg"></div>
-									</div>
-								</div>
-							</div>
-                            <!-- delete one child's original picture -->													
+																				
 						</div>														
 		</div><!-- end container -->
 	</div>
 </div>
+<!----taem----->
 <div class="team" id="team">
 	<div class="wrap">
 		<div class="team-grids">
-			<h2>Our Team</h2>
-			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
-						<div class="images_1_of_4">
-					 		<a href="#" class="radius"><img src="./static/images/pic1.jpg"></a>
-					 		<h3>Name</h3>
-					 		<p>Lorem ipsum is simply dummy text of the printing and typesetting industry.Lorem ipsum has been </p>
-					 		<a href="#contact" class="scroll"><img src="./static/images/msg.png"></a>
+			<h2>实验室主任</h2>
+			<!--<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.
+			Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, 
+			making it over 2000 years old.</p>-->
+						<div class="images_1">
+					 		<a href="http://www.machineilab.org/users/zhangyi/index.html"  target="_blank"><img src="./static/images/MemPhotos/zhangyi.png"></a>
+					 		<h3>章毅</h3>
+					 		<p>四川大学计算机学院（软件学院）院长、博士生导师、教育部新世纪优秀人才、四川省有突出贡献优秀专家
+								四川省学术技术带头人，享受国务院特殊津贴专家。2016年当选国际
+								IEEE（The Institude of Electrical and Electronics Engineers）Fellow。</p>
+					 		<a href="#contact" class="scroll"><img src="./static/images/msg.png"></a>				    
+						</div>
+						<hr style="height:3px;width:70%;border:none;border-top:3px double gray;">
+						<div class="">
+						<h2>主要成员</h2>
 						</div>
 						<div class="images_1_of_4">
-							 <a href="#" class="radius"><img src="./static/images/pic2.jpg"></a>
-							 <h3>Name</h3>
-							 <p>Lorem ipsum is simply dummy text of the printing and typesetting industry.Lorem ipsum has been</p>		
-							 <a href="#contact" class="scroll"><img src="./static/images/msg.png"></a>
+							 <a href="#" class="radius"><img src="./static/images/MemPhotos/xuxiuyuan.png"></a>	
+							 <h3>徐修远</h3>
+							 <a href="#" class="radius"><img src="./static/images/MemPhotos/linziyan.png"></a>	
+							 <h3>林子彦</h3>
+							 <!--<p>Lorem ipsum is simply dummy text of the printing and typesetting industry.Lorem ipsum has been</p>		
+							 <a href="#contact" class="scroll"><img src="./static/images/msg.png"></a>-->					   
 						</div>
 						<div class="images_1_of_4">
-							 <a href="#" class="radius"><img src="./static/images/pic3.jpg"></a>
-							 <h3>Name</h3>
-							 <p>Lorem ipsum is simply dummy text of the printing and typesetting industry.Lorem ipsum has been </p>	
-							<a href="#contact" class="scroll"><img src="./static/images/msg.png"></a>
+							 <a href="#" class="radius"><img src="./static/images/MemPhotos/wangyan.png"></a>	
+							 <h3>王琰</h3>
+							 <a href="#" class="radius"><img src="./static/images/MemPhotos/keming.png"></a>	
+							 <h3>柯铭</h3>
+							 <!--<p>Lorem ipsum is simply dummy text of the printing and typesetting industry.Lorem ipsum has been</p>		
+							 <a href="#contact" class="scroll"><img src="./static/images/msg.png"></a>-->					   
 						</div>
 						<div class="images_1_of_4">
-							 <a href="#" class="radius"><img src="./static/images/pic4.jpg"></a>
-							 <h3>Name</h3>
-							 <p>Lorem ipsum is simply dummy text of the printing and typesetting industry.Lorem ipsum has been</p>	
-							 <a href="#contact" class="scroll"><img src="./static/images/msg.png"></a>
+							 <a href="#" class="radius"><img src="./static/images/MemPhotos/wangxu.png"></a>	
+							 <h3>王旭</h3>
+							 <a href="#" class="radius"><img src="./static/images/MemPhotos/liwenjing.png"></a>	
+							 <h3>李文静</h3>
+							 <!--<p>Lorem ipsum is simply dummy text of the printing and typesetting industry.Lorem ipsum has been</p>		
+							 <a href="#contact" class="scroll"><img src="./images/msg.png"></a>-->					   
+						</div>
+						<div class="images_1_of_4">
+							 <a href="#" class="radius"><img src="./static/images/MemPhotos/jiangzhile.png"></a>	
+							 <h3>蒋志乐</h3>
+							 <a href="#" class="radius"><img src="./static/images/MemPhotos/panchen.png"></a>	
+							 <h3>潘晨</h3>
+							 <!--<p>Lorem ipsum is simply dummy text of the printing and typesetting industry.Lorem ipsum has been </p>	
+							<a href="#contact" class="scroll"><img src="./static/images/msg.png"></a>-->							   
+						</div>
+						<div class="images_1_of_4">
+							 
+							 <a href="#" class="radius"><img src="./static/images/MemPhotos/piyong.png"></a>	
+							 <h3>皮勇</h3>
+							 <a href="#" class="radius"><img src="./static/images/MemPhotos/panyue.png"></a>	
+							 <h3>潘悦</h3>
+							 <!--<p>Lorem ipsum is simply dummy text of the printing and typesetting industry.Lorem ipsum has been</p>	
+							 <a href="#contact" class="scroll"><img src="./static/images/msg.png"></a>-->				   
+						</div>
+						<div class="images_1_of_4">
+							 <a href="#" class="radius"><img src="./static/images/MemPhotos/wangjiahao.png"></a>	
+							 <h3>王嘉皓</h3>
+							 <!--<p>Lorem ipsum is simply dummy text of the printing and typesetting industry.Lorem ipsum has been</p>	
+							 <a href="#contact" class="scroll"><img src="./static/images/msg.png"></a>-->				   
 						</div>
 						<div class="clear"> </div>
 		 </div>
 </div>
-</div>	
-
+</div>
+<!---conatct---->
 <div class="contact" id="contact">
 	<div class="wrap">
-		<h3>Contact Us</h3>
+		<h3>联系我们</h3>
 		<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
         <div class="contact_form">
 			 	 	    <form method="post" action="contact-post.html">
@@ -344,15 +295,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<div class="wrap">
 		<div class="nav">
 			<ul>
-				<li><a href="#banner" class="scroll">Home</a><span>:</span></li>
+				<li><a href="#home" class="scroll">Home</a><span>:</span></li>
 				<li><a href="#about" class="scroll">About</a><span>:</span></li>
-				<li><a href="#portfolio" class="scroll">Games</a><span>:</span></li>
 				<li><a href="#team" class="scroll">Team</a><span>:</span></li>
+				<li><a href="#portfolio" class="scroll">Portfolio</a><span>:</span></li>
 				<li><a href="#contact" class="scroll">Contact</a></li>
 			</ul>
 		</div>
 		<div class="copy-right">
-			<p>© Copyright 2014  All Rights Reserved       Template by <a href="http://w3layouts.com/">AI Game</a></p>
+			<p>© Copyright 2016  All Rights Reserved       Template by <a href="http://w3layouts.com/">四川大学人工智能实验室</a></p>
 			 <!-- scroll_top_btn -->
 		<script type="text/javascript" src="./static/js/move-top.js"></script>
 		<script type="text/javascript" src="./static/js/easing.js"></script>
@@ -364,11 +315,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			});
 		});
 	</script>
-		 <a href="#top" id="toTop" style="display: block;"><span id="toTopHover" style="opacity: 1;"></span></a>
+		 <a href="#" id="toTop" style="display: block;"><span id="toTopHover" style="opacity: 1;"></span></a>
 		</div>
 	</div>
-</div>
-<script src="/static/js/jquery.nav.js" type="text/javascript"></script>
-<script src="/static/js/custom.js" type="text/javascript"></script>
+</div>	
+<script src="static/js/jquery.nav.js" type="text/javascript"></script>
+<script src="static/js/custom.js" type="text/javascript"></script>
 </body>
 </html>

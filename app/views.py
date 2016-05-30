@@ -9,3 +9,8 @@ def index():
 @app.route('/milGo')
 def milGo():
     return render_template("milGo.html")
+
+
+@app.route('/project')
+def project():
+    return render_template("project.html")
